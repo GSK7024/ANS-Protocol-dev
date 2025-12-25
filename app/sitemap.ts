@@ -11,11 +11,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/marketplace',
         '/manifesto',
         '/docs',
+        '/seller-portal',
+        '/status',
+        '/chat',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'daily' as const,
-        priority: 1,
+        priority: route === '' ? 1 : 0.8,
     }));
 
     // 2. Fetch all active agents

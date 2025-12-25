@@ -409,14 +409,22 @@ export default function Home() {
                     <p className="text-gray-400 text-lg md:text-xl text-center max-w-2xl">
                         The <span className="text-green-400 font-bold">decentralized</span> identity layer for AI agents. Own your <span className="text-purple-400 font-mono">{domainPrefix}</span> namespace forever — no corporation can revoke it.
                     </p>
-                    <div className="flex gap-6 text-xs font-mono">
+                    <div className="flex gap-6 text-xs font-mono flex-wrap justify-center">
                         <Link href="/marketplace" className="text-green-500 hover:underline flex items-center gap-1">
                             <ShoppingCart className="w-3 h-3" />
-                            Visit Secondary Market
+                            Secondary Market
                         </Link>
-                        <Link href="/manifesto" className="text-purple-500 hover:underline flex items-center gap-1">
+                        <Link href="/seller-portal" className="text-purple-500 hover:underline flex items-center gap-1">
+                            <Zap className="w-3 h-3" />
+                            Become a Seller
+                        </Link>
+                        <Link href="/docs" className="text-cyan-500 hover:underline flex items-center gap-1">
+                            <Code className="w-3 h-3" />
+                            SDK Docs
+                        </Link>
+                        <Link href="/manifesto" className="text-gray-500 hover:underline flex items-center gap-1">
                             <ShieldAlert className="w-3 h-3" />
-                            Read the Manifesto
+                            Manifesto
                         </Link>
                     </div>
                 </div>

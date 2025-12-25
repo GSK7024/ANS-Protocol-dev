@@ -108,8 +108,10 @@ pub mod ans_registry {
         _name: String,
     ) -> Result<()> {
         let domain = &mut ctx.accounts.domain;
+        let clock = Clock::get()?;
         
         require!(domain.is_listed, AnsError::NotForSale);
+        require!(domain.expires_at > clock.unix_timestamp, AnsError::DomainExpired);
         
         let price = domain.list_price;
         

@@ -40,32 +40,106 @@ agent://travel-buddy → 0x8f3...
 
 ---
 
-## 🏃 Quick Start
+## 🏃 Run Locally (Complete Guide)
 
 ### Prerequisites
-- Node.js 18+
+- Node.js 18+ ([download](https://nodejs.org/))
 - npm or yarn
-- Solana wallet (Phantom recommended)
+- Git
+- Solana CLI (optional, for wallet testing)
+- Phantom or Solflare wallet
 
-### Installation
+### Step 1: Clone & Install
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/ans-protocol.git
-cd ans-protocol
+git clone https://github.com/GSK7024/ANS-Protocol-Agent-Name-Service.git
+cd ANS-Protocol-Agent-Name-Service
 
 # Install dependencies
 npm install
+```
 
-# Set up environment variables
+### Step 2: Set Up Supabase (Database)
+
+1. Create a free account at [supabase.com](https://supabase.com)
+2. Create a new project
+3. Go to **Settings → API** and copy your keys
+4. Run the database migrations:
+
+```bash
+# In Supabase SQL Editor, run these files in order:
+# 1. db/schema.sql (creates tables)
+# 2. db/escrow_tables.sql (escrow system)
+# 3. db/domain_webhooks.sql (webhooks)
+```
+
+### Step 3: Configure Environment
+
+```bash
+# Copy the example env file
 cp .env.example .env.local
-# Edit .env.local with your keys
+```
 
-# Run development server
+Edit `.env.local`:
+
+```env
+# Supabase (REQUIRED)
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...
+
+# Solana RPC
+NEXT_PUBLIC_SOLANA_RPC_URL=https://api.devnet.solana.com
+
+# Your Wallet (receives domain payments)
+NEXT_PUBLIC_DEV_WALLET=YourWalletAddressHere
+NEXT_PUBLIC_VAULT_WALLET=YourVaultWalletHere
+
+# App URL
+NEXT_PUBLIC_URL=http://localhost:3000
+```
+
+### Step 4: Run Development Server
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+Open [http://localhost:3000](http://localhost:3000) 🎉
+
+### Step 5: Run Tests
+
+```bash
+# Run all 97 tests
+npm test
+
+# Run with coverage
+npm run test:coverage
+```
+
+### Step 6: Test the API
+
+```bash
+# Resolve an agent
+curl http://localhost:3000/api/resolve?name=marriott
+
+# Create an escrow (requires body)
+curl -X POST http://localhost:3000/api/escrow \
+  -H "Content-Type: application/json" \
+  -d '{"buyer_wallet":"YourWallet","seller_agent":"marriott","amount":1,"service_details":"Test"}'
+```
+
+---
+
+## 🐛 Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| `supabaseUrl is required` | Check your `.env.local` has `NEXT_PUBLIC_SUPABASE_URL` |
+| `RLS policy violation` | Run all SQL files in `db/` folder |
+| `Module not found` | Run `npm install` again |
+| `Port 3000 in use` | Run `npm run dev -- -p 3001` |
 
 ---
 
@@ -120,12 +194,24 @@ All domains are **FREE** on devnet! Perfect for testing:
 
 ---
 
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [Getting Started](docs/GETTING_STARTED.md) | DevNet testing tutorial |
+| [SDK Documentation](docs/SDK.md) | TypeScript SDK reference |
+| [Seller Integration](docs/SELLER_INTEGRATION.md) | How to become a seller |
+| [Audit Preparation](docs/AUDIT_PREPARATION.md) | Security documentation |
+
+---
+
 ## 🔗 Links
 
-- **Website:** https://ans-protocol.vercel.app
+- **Website:** https://ans.dev
 - **Devnet:** https://ans-devnet.vercel.app
 - **Twitter:** [@ANSProtocol](https://x.com/ANSProtocol)
 - **Discord:** [Join us](https://discord.gg/szqNwV5y)
+- **GitHub:** [GSK7024/ANS-Protocol](https://github.com/GSK7024/ANS-Protocol-Agent-Name-Service)
 
 ---
 

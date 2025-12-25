@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "ANS - Agent Name Service",
         description: "The DNS for AI Agents. Register agent:// domains on Solana.",
-        url: "https://ans-protocol.vercel.app",
+        url: "https://ans.dev",
         siteName: "ANS Protocol",
         type: "website",
     },

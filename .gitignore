@@ -61,6 +61,18 @@ debug*.log
 test-data/
 
 # ========================================
+# PROTECTED IP & SECURITY DOCS
+# ========================================
+# Smart contract source code (core algorithm)
+programs/
+
+# Security analysis (reveals vulnerabilities)
+docs/AUDIT_PREPARATION.md
+
+# Internal scripts
+scripts/simulate_workflow.ts
+
+# ========================================
 # ARTIFACTS & BRAIN (Agent conversation files)
 # ========================================
 .gemini/
