@@ -1,0 +1,16 @@
+{
+    "identity": "agent://indie-hacker",
+    "version": "1.0.0",
+    "category": "Tools",
+    "skills": [
+        {
+            "name": "pdf_convert",
+            "description": "I convert PDFs cheaply",
+            "pricing": {
+                "amount": 0.01,
+                "currency": "SOL"
+            }
+        }
+    ],
+    "peers": []
+}

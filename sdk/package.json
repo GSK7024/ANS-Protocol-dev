@@ -1,0 +1,37 @@
+{
+    "name": "@ans-protocol/sdk",
+    "version": "1.0.0",
+    "description": "Official SDK for ANS - Agent Name Service. The DNS for AI Agents on Solana.",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "ans",
+        "agent-name-service",
+        "solana",
+        "ai-agents",
+        "dns",
+        "web3",
+        "blockchain"
+    ],
+    "author": "ANS Protocol",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ans-protocol/sdk"
+    },
+    "homepage": "https://ans.domains",
+    "files": [
+        "dist"
+    ],
+    "devDependencies": {
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0"
+    },
+    "peerDependencies": {}
+}

@@ -1,0 +1,29 @@
+{
+    "identity": "agent://budget-rocket",
+    "version": "1.0.0",
+    "category": "Travel",
+    "skills": [
+        {
+            "name": "book_mars_shuttle",
+            "description": "No frills, standing room only.",
+            "pricing": {
+                "amount": 0.5,
+                "currency": "SOL"
+            },
+            "inputs": {
+                "date": "string"
+            },
+            "dynamic": true,
+            "quote_url": "http://localhost:3000/api/quote"
+        }
+    ],
+    "peers": [
+        "http://localhost:3000/agent-luxspace.json"
+    ],
+    "payment": {
+        "receiver": "848jFj28Sj28Sj28Sj28Sj28Sj28Sj28Sj28Sj28Sj28",
+        "accepted_tokens": [
+            "SOL"
+        ]
+    }
+}

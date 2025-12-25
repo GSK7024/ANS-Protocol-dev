@@ -1,0 +1,22 @@
+{
+    "identity": "agent://luxspace",
+    "version": "1.0.0",
+    "category": "Travel",
+    "skills": [
+        {
+            "name": "book_mars_shuttle",
+            "description": "Premium First Class to Mars.",
+            "pricing": {
+                "amount": 5.0,
+                "currency": "SOL"
+            },
+            "inputs": {
+                "date": "string"
+            }
+        }
+    ],
+    "peers": [
+        "http://localhost:3000/agent-mid.json",
+        "http://localhost:3000/agent-news.json"
+    ]
+}

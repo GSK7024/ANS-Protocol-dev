@@ -1,0 +1,80 @@
+# ========================================
+# ANS Protocol - GitHub .gitignore
+# ========================================
+# Public repo for transparency - protect secrets!
+
+# ========================================
+# ENVIRONMENT & SECRETS - CRITICAL!
+# ========================================
+.env
+.env.*
+!.env.example
+.env.local
+.env.development
+.env.production
+.env.devnet
+*.env
+
+# Private keys (NEVER commit these!)
+*private*key*
+*secret*
+*.pem
+*.key
+
+# ========================================
+# BUILD & DEPENDENCIES
+# ========================================
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# ========================================
+# VERCEL & DEPLOYMENT
+# ========================================
+.vercel/
+
+# ========================================
+# IDE & SYSTEM FILES
+# ========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.log
+
+# ========================================
+# OPTIONAL: Keep these PRIVATE if you want
+# Uncomment to hide specific files
+# ========================================
+# scripts/          # Internal deployment scripts
+# db/               # Database migrations (already in Supabase)
+
+# ========================================
+# TEST & DEBUG FILES
+# ========================================
+*.test.local.ts
+debug*.log
+test-data/
+
+# ========================================
+# ARTIFACTS & BRAIN (Agent conversation files)
+# ========================================
+.gemini/
+
+# ========================================
+# KEEP PUBLIC (don't add these to gitignore):
+# ========================================
+# ✅ app/           - Frontend pages & API routes
+# ✅ components/    - UI components
+# ✅ lib/           - Utility libraries
+# ✅ hooks/         - React hooks
+# ✅ utils/         - Helper functions
+# ✅ public/        - Static assets
+# ✅ sdk/           - Client SDK (good for devs!)
+# ✅ README.md      - Project documentation
+# ✅ package.json   - Dependencies
+.vercel

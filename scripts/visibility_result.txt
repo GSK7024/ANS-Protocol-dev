@@ -1,0 +1,7 @@
+--- Searching by Owner Wallet: 6oWGBnG4ebgeKLabmyn737rpfnh9gh5Z5A1oYdynNGv ---
+✅ [ADMIN] Found 2 domains for this wallet:
+ - ID: 44deb922-b336-4676-8988-79496ec2cc47 | Name: 'solana' | Status: reserved
+ - ID: 884b3007-23b2-4986-80f1-1716ecfac363 | Name: 'agent' | Status: reserved
+✅ [ANON] Found 2 domains for this wallet:
+ - ID: 44deb922-b336-4676-8988-79496ec2cc47 | Name: 'solana' | Status: reserved
+ - ID: 884b3007-23b2-4986-80f1-1716ecfac363 | Name: 'agent' | Status: reserved

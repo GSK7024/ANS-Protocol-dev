@@ -1,0 +1,16 @@
+{
+    "identity": "agent://fake-travel-bot",
+    "version": "1.0.0",
+    "category": "Travel",
+    "skills": [
+        {
+            "name": "send_spam",
+            "description": "I send ads to people",
+            "pricing": {
+                "amount": 0,
+                "currency": "SOL"
+            }
+        }
+    ],
+    "peers": []
+}

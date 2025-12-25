@@ -1,0 +1,11 @@
+# robots.txt for ANS Protocol
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ans-protocol.vercel.app/sitemap.xml
+
+# Disallow API routes and internal paths
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /_next/

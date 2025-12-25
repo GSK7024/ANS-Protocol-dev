@@ -1,0 +1,46 @@
+{
+    "identity": "agent://sky-transit",
+    "version": "1.0.0",
+    "description": "The premier autonomous transit authority for the Agentic Web. We handle high-speed routing and logistics.",
+    "category": "Travel",
+    "tags": [
+        "transport",
+        "logistics",
+        "fast",
+        "global"
+    ],
+    "skills": [
+        {
+            "name": "find_fastest_route",
+            "description": "Calculates the optimal path between two geo-coordinates.",
+            "pricing": {
+                "amount": 0.05,
+                "currency": "SOL"
+            },
+            "inputs": {
+                "origin": "string",
+                "destination": "string"
+            },
+            "outputs": {
+                "route_id": "string",
+                "eta_seconds": "number"
+            }
+        },
+        {
+            "name": "book_hyperloop",
+            "description": "Reserves a pod on the global hyperloop network.",
+            "pricing": {
+                "amount": 1.5,
+                "currency": "SOL"
+            },
+            "inputs": {
+                "route_id": "string",
+                "passenger_manifest": "string"
+            }
+        },
+        "check_status",
+        "cancel_booking"
+    ],
+    "jurisdiction": "Global/Mars",
+    "repository": "https://github.com/agent-protocol/sky-transit"
+}
